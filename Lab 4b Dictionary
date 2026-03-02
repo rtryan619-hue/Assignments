@@ -1,0 +1,93 @@
+## Lab 4b Dictionary
+
+#1A
+my_dict = {
+    "name": "Ryan",
+    "age": 25,
+    "city": "San Diego",
+    "job": "Safety Specialist",
+    "school": "Miramar College",
+    "major": "Computer Information Sciences",
+    "car": "Subaru Outback",
+    "game": "War Thunder",
+    "color": "Purple",
+    "food": "Donuts"
+}
+
+print(my_dict)
+#1B
+my_user_dict = {}
+
+choice = "Y"
+
+while choice == "Y":
+    ssn = input("Enter SSN: ")
+    name = input("Enter Name: ")
+
+    my_user_dict[ssn] = name
+
+    choice = input("Do you want to continue (Y/N): ")
+
+print(my_user_dict)
+print("Number of keys in dictionary:", len(my_user_dict))
+#You need one key for each user entry. In this code, the SSN is the key and the name is the value.
+
+#1C
+a = [("a", 1), ("b", 2), ("c", 3)]
+
+res = dict(a)
+
+print(res)
+
+#1D
+my_list = [("a", 1), ("b", 2), ("c", 3), ("d", 4)]
+
+new_dict = {}
+
+for item in my_list:
+    new_dict[item[0]] = item[1]
+
+print(new_dict)
+
+#1E
+text = """The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."""
+
+text = text.lower()
+text = text.replace(".", "")
+text = text.replace(",", "")
+text = text.replace("(", "")
+text = text.replace(")", "")
+
+words = text.split()
+
+word_count = {}
+
+for word in words:
+    if word in word_count:
+        word_count[word] = word_count[word] + 1
+    else:
+        word_count[word] = 1
+
+print(word_count)
+
+#2A
+
+d_orig = {123: "Coconut"}
+d_copy = d_orig.copy()
+
+d_copy[123] = "Apple"
+
+print(d_orig)
+print(d_copy)
+#2B
+d_orig = {123: "Coconut"}
+d_copy = d_orig.copy()
+
+d_copy[123] = "Apple"
+
+print(d_orig)
+print(d_copy)
+#2C
+d = {[1, 2, 3]: "hello"}
+print(d)
+# This error happens because a list cannot be used as a dictionary key. Lists can be changed, so they are unhashable.
