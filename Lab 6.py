@@ -164,36 +164,7 @@ print()
 
 print("NEW HOTMAIL EMAILS")
 print(hotmail_list)
-```
+
 
 ## Explanation
 This program first counts the number of characters and words in the story. It uses a list to store the words after splitting the story with `split()`. Then it cleans the words using `lower()` and `strip()` and prints a simple histogram using stars. After that, it repeats the word counting using a dictionary. The program also uses regular expressions with `re.findall()` to extract phone numbers and email addresses from the story. Finally, it takes the username part of each email and creates a new list with `@hotmail.com` added to each one.
-
-## Sample Output
-Paste your program output here after running the code in PyCharm.
-
-Example format:
-
-```text
-WORD AND CHARACTER COUNT
-Characters: 
-Words: 
-
-HISTOGRAM USING LIST
-...
-
-WORD FREQUENCIES USING DICTIONARY
-...
-
-PHONE NUMBERS FOUND
-['1-888-111-2222']
-
-EMAIL ADDRESSES FOUND
-['rfederer@tennis.com', 'swilliams@tennis.com']
-
-EMAIL USERNAMES
-['rfederer', 'swilliams']
-
-NEW HOTMAIL EMAILS
-['rfederer@hotmail.com', 'swilliams@hotmail.com']
-```
