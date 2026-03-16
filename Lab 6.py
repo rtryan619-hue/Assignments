@@ -5,7 +5,7 @@ This program counts the number of words and characters in a string, finds word f
 
 ## Python Code
 
-```python
+python
 import re
 
 # provided story
